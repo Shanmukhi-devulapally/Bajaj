@@ -11,7 +11,8 @@ class HackRxRequest(BaseModel):
 
 @app.post("/api/v1/hackrx/run")
 async def hackrx_run(payload: HackRxRequest):
-    print("Request received:", data)
+    print("Documents:", payload.documents)
+    print("Questios:", payload.questions)
     try:
         index, texts = process_pdf_and_create_faiss(payload.documents)
         answers = []
