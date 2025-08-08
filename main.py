@@ -1,5 +1,6 @@
 from fastapi import FastAPI, HTTPException, Request
 from pydantic import BaseModel
+from typing import List
 from utils import process_pdf_and_create_faiss, get_relevant_chunks
 from model import generate_answer
 
